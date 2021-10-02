@@ -18,7 +18,7 @@ var FormView = {
     // Make this function actually send a message to the Parse API.
 
     //get the message from the <form> field
-    var messageText = this.$form.find('input[id=message]').val();
+    var messageText = FormView.$form.find('input[id=message]').val();
 
     //create an object, to send to API
     var messageObject = {
