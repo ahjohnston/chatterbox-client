@@ -30,6 +30,11 @@ var App = {
 
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
+
+      //update Messages._data with the data from calling readAll
+
+      callback();
+
     });
   },
 
