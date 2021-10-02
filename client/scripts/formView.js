@@ -18,7 +18,8 @@ var FormView = {
     // Make this function actually send a message to the Parse API.
 
     //get the message from the <form> field
-    var messageText = FormView.$form.find('input[id=message]').val();
+    var $message = FormView.$form.find('input[id=message]'); // HTML field element
+    var messageText = $message.val(); // value of the field
 
     //create an object, to send to API
     var messageObject = {
@@ -37,9 +38,9 @@ var FormView = {
       console.log('chatterbox failed to send message. you are also a failure');
     });
 
-    // Updates Messages
-    // Re-render the page with new messages
-
+    // Remove the text in the text box
+    // HTML element
+    $message.val('');
     console.log('click!');
   },
 
@@ -50,7 +51,5 @@ var FormView = {
 
 };
 
-
-// thought for later - can we put startSpinner inside of App.fetch()?
 
 // clear text box after clicking submit
