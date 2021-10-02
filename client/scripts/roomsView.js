@@ -8,6 +8,7 @@ var RoomsView = {
   initialize: function () {
     // TODO: Perform any work which needs to be done
     // when this view loads.
+    RoomsView.$select.on('change', RoomsView.handleChange);
     RoomsView.render();
   },
 
@@ -32,6 +33,8 @@ var RoomsView = {
 
   handleChange: function (event) {
     // TODO: Handle a user selecting a different room.
+    // Annie, this is where you should be writing your code (line 36) -- HERE
+    App.fetch(App.stopSpinner, MessagesView.render);
   },
 
   handleClick: function (event) {
