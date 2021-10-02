@@ -20,13 +20,14 @@ var FormView = {
     //get the message from the <form> field
     var $message = FormView.$form.find('input[id=message]'); // HTML field element
     var messageText = $message.val(); // value of the field
+    var roomname = RoomsView.getCurrentRoom();
 
     //create an object, to send to API
     var messageObject = {
       username: App.username,
       text: messageText,
       //add functionality that pulls the room name
-      roomname: 'no room yet'
+      roomname: roomname
     };
 
     Parse.create(messageObject, data => {

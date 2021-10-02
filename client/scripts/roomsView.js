@@ -36,6 +36,10 @@ var RoomsView = {
 
   handleClick: function (event) {
     // TODO: Handle the user clicking the "Add Room" button.
+  },
+
+  getCurrentRoom: () => {
+    return RoomsView.$select.val();
   }
 
 };
