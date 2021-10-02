@@ -12,6 +12,8 @@ var MessagesView = {
   },
 
   render: function(friend) {
+    // clear the #chats
+    MessagesView.$chats.empty();
     // TODO: Render _all_ the messages.
     //reference the current database of messages
     var messages = Messages.retrieve(friend);

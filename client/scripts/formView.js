@@ -30,11 +30,15 @@ var FormView = {
 
     Parse.create(messageObject, data => {
       //success callback
+      App.fetch(App.stopSpinner, MessagesView.render);
       console.log('chatterbox message sent!');
     }, data => {
       //failure callback
       console.log('chatterbox failed to send message. you are also a failure');
     });
+
+    // Updates Messages
+    // Re-render the page with new messages
 
     console.log('click!');
   },
@@ -45,3 +49,8 @@ var FormView = {
   }
 
 };
+
+
+// thought for later - can we put startSpinner inside of App.fetch()?
+
+// clear text box after clicking submit

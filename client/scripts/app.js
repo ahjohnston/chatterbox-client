@@ -16,7 +16,7 @@ var App = {
     // MessagesView.initialize();
 
     // Fetch initial batch of messages
-    App.startSpinner();
+
     App.fetch(App.stopSpinner, FormView.initialize, RoomsView.initialize, MessagesView.initialize);
 
     // TODO: Make sure the app loads data from the API
@@ -24,6 +24,7 @@ var App = {
   },
   //TODO: figure out how to use a default parameter with a ... rest parameter
   fetch: function (...callbacks) {
+    App.startSpinner();
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log('data from the server is: ', data);
