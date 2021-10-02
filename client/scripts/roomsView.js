@@ -9,14 +9,27 @@ var RoomsView = {
   initialize: function() {
     // TODO: Perform any work which needs to be done
     // when this view loads.
+    RoomsView.render();
+    console.log('initializing rooms');
   },
 
   render: function() {
     // TODO: Render out the list of rooms.
+    // take each element from our Rooms_data set and pass to renderRoom
+    console.log('rendering rooms');
+    for (var room in Rooms._data) {
+      console.log(room);
+      RoomsView.renderRoom(room);
+    }
   },
 
   renderRoom: function(roomname) {
     // TODO: Render out a single room.
+    // turn it into an html element
+    $room = (`<option value="${roomname}">${roomname}</option>`);
+    // append to select element
+
+    RoomsView.$select.append($room);
   },
 
   handleChange: function(event) {

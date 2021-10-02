@@ -34,6 +34,7 @@ var App = {
 
       //update Messages._data with the data from calling readAll
       Messages.update(data);
+      Rooms.update(data);
 
       //execute the callbacks as soon as the asynchronous stuff is done
       //spinner has to wait to "stop" until all data has been fetched
