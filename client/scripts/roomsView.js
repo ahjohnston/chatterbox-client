@@ -2,28 +2,26 @@
 // responsible for displaying and selecting rooms.
 
 var RoomsView = {
-
   $button: $('#rooms button'),
   $select: $('#rooms select'),
 
-  initialize: function() {
+  initialize: function () {
     // TODO: Perform any work which needs to be done
     // when this view loads.
     RoomsView.render();
-    console.log('initializing rooms');
   },
 
-  render: function() {
+  render: function () {
     // TODO: Render out the list of rooms.
     // take each element from our Rooms_data set and pass to renderRoom
-    console.log('rendering rooms');
-    for (var room in Rooms._data) {
-      console.log(room);
+
+    for (var room of Rooms.retrieve()) {
       RoomsView.renderRoom(room);
     }
+
   },
 
-  renderRoom: function(roomname) {
+  renderRoom: function (roomname) {
     // TODO: Render out a single room.
     // turn it into an html element
     $room = (`<option value="${roomname}">${roomname}</option>`);
@@ -32,11 +30,11 @@ var RoomsView = {
     RoomsView.$select.append($room);
   },
 
-  handleChange: function(event) {
+  handleChange: function (event) {
     // TODO: Handle a user selecting a different room.
   },
 
-  handleClick: function(event) {
+  handleClick: function (event) {
     // TODO: Handle the user clicking the "Add Room" button.
   }
 

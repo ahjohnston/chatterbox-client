@@ -17,9 +17,11 @@ var Rooms = {
       Rooms._data.add(message.roomname);
     }
 
+  },
+
+  retrieve: () => {
+    return Array.from(Rooms._data);
   }
-
-
 
 
 };
