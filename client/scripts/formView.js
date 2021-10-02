@@ -16,7 +16,26 @@ var FormView = {
 
     // TODO: Currently, this is all handleSubmit does.
     // Make this function actually send a message to the Parse API.
-  
+
+    //get the message from the <form> field
+    var messageText = this.$form.find('input[id=message]').val();
+
+    //create an object, to send to API
+    var messageObject = {
+      username: App.username,
+      text: messageText,
+      //add functionality that pulls the room name
+      roomname: 'no room yet'
+    };
+
+    Parse.create(messageObject, data => {
+      //success callback
+      console.log('chatterbox message sent!');
+    }, data => {
+      //failure callback
+      console.log('chatterbox failed to send message. you are also a failure');
+    });
+
     console.log('click!');
   },
 
