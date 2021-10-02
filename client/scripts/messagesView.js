@@ -27,11 +27,11 @@ var MessagesView = {
 
   renderMessage: function(message) {
     // TODO: Render a single message.
-    //pass the message through the template method (turns the message object into a DOM element)
-    var $message = messageView.render(message);
+    //pass the message through the template (turns the message object into a DOM element)
+    var $message = MessageView.render(message);
 
     //add the DOM-friendly message to chat element
-    $chats.append($message);
+    MessagesView.$chats.append($message);
   },
 
   handleClick: function(event) {
