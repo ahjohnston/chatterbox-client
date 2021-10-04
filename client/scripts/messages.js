@@ -15,7 +15,7 @@ var Messages = {
 
   addMsg: function(string) {
     //create a new message object, and add it to Message.data
-  }
+  },
 
   //what other methods should we implement?
 
