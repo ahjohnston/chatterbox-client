@@ -9,5 +9,14 @@ var Messages = {
 
   // TODO: Define methods which allow you to retrieve from,
   // add to, and generally interact with the messages.
+  retrieve: function () {
+    return this._data;
+  },
+
+  addMsg: function(string) {
+    //create a new message object, and add it to Message.data
+  }
+
+  //what other methods should we implement?
 
 };
